@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if site.app.app_id != "" %}
+  <meta name="apple-itunes-app" content="app-id={{ site.app.app_id }}, app-argument={{ page.url | absolute_url }}">
+  {% endif %}
+
+  {% seo %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/app-icon.png' | relative_url }}">
+
+  {% feed_meta %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "{{ site.app.name }}",
+    "description": "{{ site.description }}",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS",
+    {% if site.app.app_id != "" %}
+    "url": "{{ site.app.store_url }}",
+    "downloadUrl": "{{ site.app.store_url }}",
+    {% endif %}
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Dose Tracking and Smart Reminders",
+      "Interactive Widgets and Live Activity",
+      "AI Drug Interaction Safety Checks",
+      "Caregiver Sharing",
+      "Prescription Label and Barcode Scanning",
+      "Symptom Tracking and Insights",
+      "Pharmacy and Refill Tracking",
+      "Apple Health Integration",
+      "VoiceOver and Accessibility Support"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: {{ site.brand.colors.primary }};
+      --brand-secondary: {{ site.brand.colors.secondary }};
+      --brand-accent: {{ site.brand.colors.accent }};
+      --brand-success: {{ site.brand.colors.success }};
+      --brand-warning: {{ site.brand.colors.warning }};
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <nav class="navbar-simple">
+        <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.app.name }}</a>
+        <div class="navbar-links">
+          {% for path in site.header_pages %}
+            {% assign my_page = site.pages | where: "path", path | first %}
+            {% if my_page.title %}
+              <a href="{{ my_page.url | relative_url }}" class="navbar-link">{{ my_page.title | escape }}</a>
+            {% endif %}
+          {% endfor %}
+          {% if site.app.status == "coming_soon" %}
+            <span class="coming-soon-badge">Coming Soon</span>
+          {% endif %}
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-content" aria-label="Content">
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="mobile-footer-signup">
+          {% if site.app.status == "coming_soon" %}
+            <span class="coming-soon-badge">Coming Soon to App Store</span>
+          {% else %}
+            <a href="{{ site.app.store_url }}" class="btn btn-primary" target="_blank" rel="noopener">Download App</a>
+          {% endif %}
+        </div>
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h4>{{ site.app.name }}</h4>
+            <p>{{ site.description }}</p>
+            <div class="footer-app-store-wrapper">
+              {% if site.app.status == "coming_soon" %}
+                <span class="coming-soon-badge">Coming Soon to App Store</span>
+              {% else %}
+                <a href="{{ site.app.store_url }}" class="btn-app-store" target="_blank" rel="noopener">
+                  <img src="{{ '/assets/images/app-store-badge.svg' | relative_url }}" alt="Download CRX on the App Store">
+                </a>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              {% for path in site.header_pages %}
+                {% assign my_page = site.pages | where: "path", path | first %}
+                {% if my_page.title %}
+                  <li><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Features</h4>
+            <ul>
+              <li><a href="/#scheduling">Smart Scheduling</a></li>
+              <li><a href="/#safety">Drug Safety</a></li>
+              <li><a href="/#privacy">Privacy First</a></li>
+              <li><a href="/#accessibility">Accessibility</a></li>
+              <li><a href="/features/">All Features</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <ul>
+              {% if site.email %}
+                <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+              {% endif %}
+              <li><a href="/support/">Support</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>CRX is not a medical device and does not provide medical advice. Always consult your physician or pharmacist. In an emergency, call 911.</p>
+          <p>&copy; {{ 'now' | date: "%Y" }} CRX by Insoc. All rights reserved. |
+             <a href="/privacy/">Privacy Policy</a> |
+             <a href="/terms/">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+  {% endif %}
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+
+</html>

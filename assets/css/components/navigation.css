@@ -1,0 +1,506 @@
+/* ==========================================================================
+   CRX - SIMPLE NAVIGATION
+   Clean, always-visible navigation
+   ========================================================================== */
+
+/* ==========================================================================
+   HEADER STYLES
+   ========================================================================== */
+
+header {
+  position: relative;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  z-index: var(--z-sticky);
+  padding: var(--space-3) 0;
+}
+
+/* ==========================================================================
+   SIMPLE NAVBAR - Always visible
+   ========================================================================== */
+
+.navbar-simple {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.navbar-brand {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--color-accent-primary);
+}
+
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+}
+
+.navbar-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: var(--color-accent-primary);
+}
+
+/* Mobile: Stack on smaller screens */
+@media (max-width: 600px) {
+  .navbar-simple {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+    padding: 0 var(--space-3);
+  }
+
+  .navbar-links {
+    justify-content: center;
+    gap: var(--space-1) var(--space-3);
+  }
+
+  .navbar-link {
+    font-size: var(--font-size-xs);
+    padding: var(--space-1);
+  }
+
+  .coming-soon-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
+
+/* ==========================================================================
+   LEGACY STYLES BELOW - Keep for compatibility
+   ========================================================================== */
+
+header.header-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Dark mode sticky header */
+@media (prefers-color-scheme: dark) {
+  header.header-sticky {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+[data-theme="dark"] header.header-sticky {
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header.header-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ==========================================================================
+   SCROLL PROGRESS INDICATOR
+   ========================================================================== */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-secondary));
+  z-index: var(--z-top);
+  transition: width 0.1s ease-out;
+}
+
+/* ==========================================================================
+   ENHANCED NAVBAR CONTAINER
+   ========================================================================== */
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+  transition: var(--transition-all);
+}
+
+header.header-sticky .navbar-container {
+  padding: var(--space-3) var(--space-6);
+}
+
+/* ==========================================================================
+   ENHANCED NAVBAR BRAND
+   ========================================================================== */
+
+.navbar-brand {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: var(--transition-all);
+  position: relative;
+}
+
+.navbar-brand:hover {
+  color: var(--color-accent-primary);
+}
+
+/* ==========================================================================
+   ENHANCED NAVBAR MENU
+   ========================================================================== */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.navbar-link {
+  position: relative;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: var(--transition-all);
+  overflow: hidden;
+}
+
+.navbar-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(46, 134, 171, 0.1), transparent);
+  transition: left 0.5s ease-out;
+}
+
+.navbar-link:hover::before {
+  left: 100%;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--color-accent-primary);
+  background: var(--color-accent-primary-alpha);
+  transform: translateY(-1px);
+}
+
+.navbar-link.active {
+  background: var(--color-accent-primary-alpha);
+  box-shadow: inset 0 0 0 1px var(--color-accent-primary);
+}
+
+/* ==========================================================================
+   ENHANCED MOBILE MENU TOGGLE
+   ========================================================================== */
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-md);
+  transition: var(--transition-all);
+}
+
+.mobile-menu-toggle:hover {
+  background: var(--color-accent-primary-alpha);
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text-primary);
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: var(--transition-all);
+  transform-origin: center;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ==========================================================================
+   ENHANCED MOBILE MENU
+   ========================================================================== */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-out;
+  z-index: var(--z-dropdown);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Dark mode mobile menu */
+@media (prefers-color-scheme: dark) {
+  .mobile-menu {
+    background: rgba(0, 0, 0, 0.95);
+    border-top: 1px solid var(--color-dark-border);
+  }
+}
+
+[data-theme="dark"] .mobile-menu {
+  background: rgba(0, 0, 0, 0.95);
+  border-top: 1px solid var(--color-dark-border);
+}
+
+.mobile-menu.active {
+  display: block;
+  transform: translateY(0);
+}
+
+.mobile-menu-link {
+  display: block;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  padding: var(--space-4) var(--space-2);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-md);
+  transition: var(--transition-all);
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-menu-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--color-accent-primary-alpha), transparent);
+  transition: left 0.4s ease-out;
+}
+
+.mobile-menu-link:hover::before {
+  left: 100%;
+}
+
+.mobile-menu-link:hover {
+  color: var(--color-accent-primary);
+  background: var(--color-accent-primary-alpha);
+  transform: translateX(var(--space-2));
+}
+
+.mobile-menu-link.download-btn {
+  margin-top: var(--space-4);
+  background: var(--color-accent-primary);
+  color: white;
+  text-align: center;
+  font-weight: var(--font-weight-semibold);
+}
+
+.mobile-menu-link.download-btn:hover {
+  background: var(--color-accent-navy);
+  transform: translateX(0) scale(1.02);
+}
+
+/* ==========================================================================
+   NAVIGATION ANIMATIONS
+   ========================================================================== */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE NAVIGATION
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  /* Mobile menu stays hidden until .active class is added via JS */
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .navbar-container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  .navbar-brand {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  .mobile-menu {
+    padding: var(--space-4);
+  }
+
+  .mobile-menu-link {
+    padding: var(--space-3) var(--space-2);
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  header,
+  .navbar-link,
+  .mobile-menu-toggle,
+  .mobile-menu,
+  .scroll-progress {
+    transition: none;
+    animation: none;
+  }
+
+  .mobile-menu-toggle.active span {
+    transition: none;
+  }
+
+  .navbar-link::before,
+  .mobile-menu-link::before {
+    display: none;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.navbar-link:focus-visible,
+.mobile-menu-link:focus-visible,
+.mobile-menu-toggle:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  header.header-sticky {
+    backdrop-filter: none;
+    background: var(--color-background);
+    border-bottom: 2px solid var(--color-text-primary);
+  }
+
+  .navbar-link.active {
+    outline: 2px solid var(--color-accent-primary);
+  }
+
+  .scroll-progress {
+    height: 4px;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+  header {
+    position: static;
+    background: white;
+    border-bottom: 1px solid black;
+  }
+
+  .mobile-menu,
+  .mobile-menu-toggle,
+  .scroll-progress {
+    display: none !important;
+  }
+
+  .navbar-menu {
+    display: flex !important;
+  }
+
+  .navbar-link {
+    color: black;
+  }
+}

@@ -1,0 +1,24 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundle files
+.bundle/
+vendor/
+# GitHub Pages builds with its own pinned gems and ignores this file.
+Gemfile.lock
+
+# Ruby files
+*.gem
+*.rbc
+/.config
+/coverage/
+
+# Local tooling
+.claude/settings.local.json
+
+# System files
+.DS_Store
+*.log

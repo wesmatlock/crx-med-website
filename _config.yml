@@ -1,0 +1,58 @@
+title: "CRX"
+# jekyll-seo-tag builds the home page title as "title | tagline", falling back to the
+# full description when no tagline is set — which is how this became a 260-char <title>.
+tagline: "Medication management, made calm"
+description: "CRX is an iOS medication management app built for clarity, calm, and confidence. Track doses, get smart reminders, check drug interactions, and share safely with caregivers — privacy focused and designed for everyone."
+baseurl: ""
+url: "https://crx-med.com"
+
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+safe: true
+incremental: false
+
+header_pages:
+  - features.md
+  - about.md
+  - privacy.md
+  - terms.md
+  - support.md
+
+app:
+  name: "CRX"
+  tagline: "Medication management with clarity, calm, and confidence."
+  icon: "/assets/images/app-icon.png"
+  screenshots: []
+  app_id: ""
+  store_url: ""
+  status: "coming_soon"
+
+email: support@crx-med.com
+
+brand:
+  colors:
+    primary: "#2E86AB"
+    secondary: "#A8DADC"
+    accent: "#457B9D"
+    success: "#2D9B6B"
+    warning: "#F4A261"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - CLAUDE.md

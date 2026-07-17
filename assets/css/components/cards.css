@@ -1,0 +1,441 @@
+/* ==========================================================================
+   CRX - CARD COMPONENTS
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE CARD STYLES
+   ========================================================================== */
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-base);
+  border: 1px solid var(--color-border);
+  transition: var(--transition-all);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent-primary);
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+}
+
+.card-header {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.card-footer {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.card-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.card-text {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ==========================================================================
+   FEATURE CARDS - Equal Height with Flexbox
+   ========================================================================== */
+
+.card-feature {
+  text-align: center;
+  padding: var(--space-6);
+  background: var(--color-surface-elevated);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-secondary));
+  transform: scaleX(0);
+  transition: var(--transition-transform);
+  transform-origin: left;
+}
+
+.card-feature:hover::before {
+  transform: scaleX(1);
+}
+
+.card-feature::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--color-accent-primary-alpha) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: var(--transition-transform);
+  z-index: var(--z-behind);
+  border-radius: var(--radius-full);
+}
+
+.card-feature:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.card-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent-primary);
+}
+
+/* Feature Card Icon */
+.card-feature .card-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+  display: block;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* Feature Card Title */
+.card-feature h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent-primary);
+  margin-bottom: var(--space-3);
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* Feature Card Description */
+.card-feature p {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  position: relative;
+  z-index: 2;
+  font-size: var(--font-size-sm);
+  flex-grow: 1;
+  margin: 0;
+}
+
+/* Feature Cards Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+/* ==========================================================================
+   SCREENSHOT CARDS
+   ========================================================================== */
+
+.card-screenshot {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--color-border);
+  transition: var(--transition-all);
+  position: relative;
+  background: var(--color-surface);
+}
+
+.card-screenshot:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: var(--shadow-xl), var(--shadow-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+
+.card-screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition-transform);
+}
+
+.card-screenshot:hover img {
+  transform: scale(1.1);
+}
+
+.card-screenshot-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-primary-alpha) 0%,
+    transparent 50%,
+    var(--color-accent-secondary-alpha) 100%
+  );
+  opacity: 0;
+  transition: var(--transition-opacity);
+}
+
+.card-screenshot:hover .card-screenshot-overlay {
+  opacity: 1;
+}
+
+.card-screenshot-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: var(--space-4);
+  text-align: center;
+  transform: translateY(100%);
+  transition: var(--transition-transform);
+}
+
+.card-screenshot:hover .card-screenshot-caption {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   STATISTIC CARDS
+   ========================================================================== */
+
+.card-stat {
+  text-align: center;
+  padding: var(--space-6);
+  background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-stat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--color-accent-primary-alpha), var(--color-accent-secondary-alpha));
+  opacity: 0;
+  transition: var(--transition-opacity);
+}
+
+.card-stat:hover::before {
+  opacity: 1;
+}
+
+.card-stat-value {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-black);
+  color: var(--color-accent-primary);
+  margin-bottom: var(--space-2);
+  position: relative;
+  z-index: 2;
+}
+
+.card-stat-label {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  position: relative;
+  z-index: 2;
+}
+
+.card-stat-icon {
+  font-size: var(--font-size-2xl);
+  color: var(--color-accent-secondary);
+  margin-bottom: var(--space-3);
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   CARD VARIANTS
+   ========================================================================== */
+
+.card-flat {
+  box-shadow: none;
+  border: 1px solid var(--color-border);
+}
+
+.card-elevated {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-elevated:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.card-borderless {
+  border: none;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, var(--color-accent-primary-alpha), var(--color-accent-secondary-alpha));
+  border: 1px solid var(--color-accent-primary);
+}
+
+/* ==========================================================================
+   CARD SIZES
+   ========================================================================== */
+
+.card-sm {
+  padding: var(--space-4);
+}
+
+.card-lg {
+  padding: var(--space-8);
+}
+
+.card-xl {
+  padding: var(--space-12);
+}
+
+/* ==========================================================================
+   RESPONSIVE CARDS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+
+  .card-feature {
+    padding: var(--space-5);
+  }
+
+  .card-feature:hover {
+    transform: translateY(-2px);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+  }
+
+  .card-feature {
+    padding: var(--space-4);
+  }
+
+  .card-feature .card-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .card-feature h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .card-feature p {
+    font-size: var(--font-size-xs);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-stat-value {
+    font-size: var(--font-size-3xl);
+  }
+
+  .card-screenshot:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card-feature,
+  .card-screenshot,
+  .card-stat {
+    transition: none;
+  }
+
+  .card:hover,
+  .card-feature:hover,
+  .card-screenshot:hover {
+    transform: none;
+  }
+
+  .card-feature::after,
+  .card-screenshot-overlay,
+  .card-screenshot-caption {
+    transition: none;
+  }
+
+  .card-screenshot:hover img {
+    transform: none;
+  }
+}
+
+/* Focus styles for interactive cards */
+.card-interactive {
+  cursor: pointer;
+}
+
+.card-interactive:focus {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+.card-interactive:focus-visible {
+  outline: 3px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .card {
+    border-width: 2px;
+  }
+
+  .card-feature::before {
+    height: 6px;
+  }
+}

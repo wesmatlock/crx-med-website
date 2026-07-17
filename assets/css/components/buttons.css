@@ -1,0 +1,441 @@
+/* ==========================================================================
+   CRX - BUTTON COMPONENTS
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE BUTTON STYLES
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-all);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  outline: none;
+}
+
+.btn:focus {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-md);
+}
+
+.btn-lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-xl);
+}
+
+.btn-xl {
+  padding: var(--space-5) var(--space-10);
+  font-size: var(--font-size-xl);
+  border-radius: var(--radius-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ==========================================================================
+   PRIMARY BUTTON - Calm Teal-Blue
+   ========================================================================== */
+
+.btn-primary {
+  background: var(--color-accent-primary);
+  color: #ffffff;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-accent-primary);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-navy));
+  opacity: 0;
+  transition: var(--transition-opacity);
+  border-radius: inherit;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), var(--shadow-accent-primary);
+  border-color: var(--color-accent-navy);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-base);
+}
+
+/* ==========================================================================
+   SECONDARY BUTTON - Success Green
+   ========================================================================== */
+
+.btn-secondary {
+  background: var(--color-success);
+  color: #ffffff;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-success);
+}
+
+.btn-secondary:hover {
+  background: color-mix(in srgb, var(--color-success) 90%, black);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), var(--shadow-success);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-base);
+}
+
+/* ==========================================================================
+   OUTLINE BUTTON
+   ========================================================================== */
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-accent-primary);
+  border: 2px solid var(--color-accent-primary);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--color-accent-primary);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Outline variants */
+.btn-outline-success {
+  color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.btn-outline-success:hover {
+  background: var(--color-success);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   GHOST BUTTON
+   ========================================================================== */
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: none;
+  box-shadow: none;
+  padding: var(--space-2) var(--space-4);
+}
+
+.btn-ghost:hover {
+  background: var(--color-surface);
+  color: var(--color-accent-primary);
+  transform: none;
+}
+
+.btn-ghost:active {
+  background: var(--color-surface);
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   APP STORE BUTTON
+   ========================================================================== */
+
+.btn-app-store {
+  background: #000000;
+  color: #ffffff;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-all);
+  border: 1px solid #000000;
+  min-height: 60px;
+}
+
+.btn-app-store img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.btn-app-store:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-app-store:active {
+  transform: scale(0.98);
+  box-shadow: var(--shadow-base);
+}
+
+/* ==========================================================================
+   NOTIFY BUTTON
+   ========================================================================== */
+
+.btn-notify {
+  background: var(--color-accent-primary);
+  color: #ffffff;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-accent-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.btn-notify:hover {
+  background: color-mix(in srgb, var(--color-accent-primary) 90%, black);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), var(--shadow-accent-primary);
+}
+
+.btn-notify:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-base);
+}
+
+/* ==========================================================================
+   ICON BUTTONS
+   ========================================================================== */
+
+.btn-icon {
+  padding: var(--space-3);
+  aspect-ratio: 1;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon-sm {
+  padding: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.btn-icon-lg {
+  padding: var(--space-4);
+  font-size: var(--font-size-xl);
+}
+
+/* ==========================================================================
+   BUTTON GROUPS
+   ========================================================================== */
+
+.btn-group {
+  display: inline-flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.btn-group-vertical {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.btn-group .btn:not(:last-child) {
+  margin-right: var(--space-1);
+}
+
+/* ==========================================================================
+   SPECIAL BUTTONS
+   ========================================================================== */
+
+/* Gradient Button */
+.btn-gradient {
+  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-navy));
+  color: #ffffff;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--color-accent-navy), var(--color-accent-primary));
+  opacity: 0;
+  transition: var(--transition-opacity);
+}
+
+.btn-gradient:hover::before {
+  opacity: 1;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ==========================================================================
+   LOADING BUTTON
+   ========================================================================== */
+
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: button-loading-spinner 0.8s linear infinite;
+}
+
+@keyframes button-loading-spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   RESPONSIVE BUTTON BEHAVIOR
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .btn {
+    min-height: 48px; /* Ensure touch-friendly size */
+  }
+
+  .btn-group {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-group .btn {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .btn-app-store {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-lg,
+  .btn-xl {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-size-base);
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+
+  .btn-gradient::before {
+    transition: none;
+  }
+
+  .btn-loading::after {
+    animation: none;
+    display: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .btn {
+    border-width: 2px;
+  }
+
+  .btn-ghost {
+    border: 2px solid var(--color-text-secondary);
+  }
+
+  .btn-outline {
+    border-width: 3px;
+  }
+}
+
+/* ==========================================================================
+   FOCUS VISIBLE ENHANCEMENTS
+   ========================================================================== */
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-accent-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-lg);
+}
+
+.btn-secondary:focus-visible {
+  outline-color: var(--color-success);
+}
+
+.btn-app-store:focus-visible {
+  outline-color: var(--color-text-primary);
+}
