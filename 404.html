@@ -1,0 +1,39 @@
+---
+layout: page
+title: Page Not Found
+permalink: /404.html
+sitemap: false
+---
+
+<div class="container" style="max-width: 640px; margin: 0 auto; text-align: center;">
+  <div id="notfound-generic">
+    <h2>Page not found</h2>
+    <p>The page you're looking for doesn't exist. <a href="/">Return to the home page</a>.</p>
+  </div>
+
+  <div id="notfound-invite" style="display: none;">
+    <h2>You've been invited to CRX</h2>
+    <p>Someone has invited you to help manage their medications as a caregiver.</p>
+    <ol style="text-align: left; display: inline-block; margin: 1rem auto;">
+      <li>Install <strong>CRX</strong> from the App Store on your iPhone.</li>
+      <li>Open the app and choose <strong>Caregiver</strong> during setup.</li>
+      <li>Tap your invite link again — or enter your invite code:</li>
+    </ol>
+    <p id="invite-code" style="font-size: 1.6rem; font-family: monospace; letter-spacing: 0.15em; font-weight: 700;"></p>
+    <p><em>If you already have CRX installed, tapping the invite link in your message opens the app directly.</em></p>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var match = window.location.pathname.match(/^\/invite\/([A-Za-z0-9-]{4,24})\/?$/);
+    if (!match) { return; }
+    document.getElementById("notfound-generic").style.display = "none";
+    var invite = document.getElementById("notfound-invite");
+    invite.style.display = "block";
+    var code = match[1].toUpperCase();
+    if (code.length === 6) { code = code.slice(0, 3) + "-" + code.slice(3); }
+    document.getElementById("invite-code").textContent = code;
+    document.title = "CRX Caregiver Invite";
+  })();
+</script>

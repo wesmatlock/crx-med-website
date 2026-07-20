@@ -6,6 +6,9 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
 baseurl: ""
 url: "https://crx-med.com"
 
+# Ship the AASA file for Universal Links (Jekyll excludes dotfolders by default)
+include: [".well-known"]
+
 markdown: kramdown
 highlighter: rouge
 plugins:
