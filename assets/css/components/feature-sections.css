@@ -162,7 +162,7 @@
   margin-top: 2px;
 }
 
-.privacy-feature-item h4 {
+.privacy-feature-item h3 {
   font-size: var(--font-size-base);
   color: var(--color-text-primary);
   margin-bottom: var(--space-1);
@@ -229,5 +229,67 @@
   .accessibility-card:hover,
   .privacy-feature-item:hover {
     transform: none;
+  }
+}
+
+/* Compact secondary features + CRX Plus */
+.feature-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+.feature-mini {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.feature-mini > span {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.feature-mini strong {
+  display: block;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.features-more {
+  text-align: center;
+  margin: var(--space-8) 0 0;
+  font-weight: var(--font-weight-medium);
+}
+
+.plus-section {
+  padding: var(--space-12) 0;
+  background: var(--color-background);
+}
+
+.plus-card {
+  max-width: 720px;
+}
+
+.plus-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .feature-mini-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-mini-grid {
+    grid-template-columns: 1fr;
   }
 }

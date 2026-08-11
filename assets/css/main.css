@@ -197,6 +197,14 @@ main {
   }
 }
 
+@media (forced-colors: active) {
+  .hero-title,
+  .section-title.gradient {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
+}
+
 /* ==========================================================================
    SCROLLBAR
    ========================================================================== */

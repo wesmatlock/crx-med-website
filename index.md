@@ -203,6 +203,44 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
         <p>Log how you feel, track adherence over time, spot patterns, and export a summary PDF for your next doctor visit.</p>
       </div>
     </div>
+
+    <div class="feature-mini-grid">
+      <div class="feature-mini">
+        <span aria-hidden="true">🌅</span>
+        <div><strong>Today View</strong> Your whole day at a glance</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">🏪</span>
+        <div><strong>Pharmacy &amp; Refills</strong> Refill reminders a week before you run out</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">❤️</span>
+        <div><strong>Apple Health</strong> Optional HealthKit sync, under your control</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">📄</span>
+        <div><strong>Doctor Visit Export</strong> Medication summary PDF for appointments</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">📵</span>
+        <div><strong>Works Offline</strong> View and log without a connection</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">🌍</span>
+        <div><strong>7 Languages</strong> Plus full VoiceOver support</div>
+      </div>
+    </div>
+
+    <p class="features-more"><a href="/features/">See all features →</a></p>
+  </div>
+</section>
+
+<section class="plus-section">
+  <div class="container">
+    <div class="notify-card plus-card reveal">
+      <p class="notify-title">Free for you. CRX Plus for the people who help.</p>
+      <p>CRX is free to download and use for managing your own medications. CRX Plus is an optional subscription that unlocks premium caregiver features — sharing with someone you trust, missed-dose alerts, and caregiver notes. Managed and billed through your Apple ID, cancel anytime in Settings. Pricing will be announced at launch.</p>
+    </div>
   </div>
 </section>
 
@@ -254,28 +292,28 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
       <div class="privacy-feature-item reveal">
         <span class="item-icon" aria-hidden="true">🚫</span>
         <div>
-          <h4>No Ads, No Tracking, No Data Sales</h4>
+          <h3>No Ads, No Tracking, No Data Sales</h3>
           <p>CRX shows no ads, uses no advertising identifiers, and never sells your health information.</p>
         </div>
       </div>
       <div class="privacy-feature-item reveal reveal-delay-1">
         <span class="item-icon" aria-hidden="true">🤝</span>
         <div>
-          <h4>Sharing Only With Your Consent</h4>
+          <h3>Sharing Only With Your Consent</h3>
           <p>Caregivers see your information only after you approve them — with the permission level you choose, revocable anytime.</p>
         </div>
       </div>
       <div class="privacy-feature-item reveal reveal-delay-2">
         <span class="item-icon" aria-hidden="true">📵</span>
         <div>
-          <h4>Works Offline</h4>
+          <h3>Works Offline</h3>
           <p>View your schedule and log doses without a connection. Your data syncs securely when you're back online.</p>
         </div>
       </div>
       <div class="privacy-feature-item reveal reveal-delay-3">
         <span class="item-icon" aria-hidden="true">🗑️</span>
         <div>
-          <h4>Delete Anytime</h4>
+          <h3>Delete Anytime</h3>
           <p>Delete your account right in the app, and your data is removed from our servers. Optional AI safety checks can run on-device with Apple Intelligence, or be turned off entirely.</p>
         </div>
       </div>
@@ -290,8 +328,5 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
     <a href="mailto:{{ site.email }}?subject=CRX Launch Notification" class="btn-white">
       Notify Me at Launch
     </a>
-    <p style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.85; max-width: 640px; margin-left: auto; margin-right: auto;">
-      CRX is not a medical device and does not provide medical advice. Always consult your physician or pharmacist about your medications. In an emergency, call 911. Reminders depend on your device and are not guaranteed.
-    </p>
   </div>
 </section>

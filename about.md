@@ -20,23 +20,23 @@ permalink: /about/
 
     <div class="privacy-features" style="margin: 2rem 0;">
       <div class="privacy-feature-item">
-        <span class="item-icon">👵</span>
+        <span class="item-icon" aria-hidden="true">👵</span>
         <div>
-          <h4>Eleanor, 72</h4>
+          <h3>Eleanor, 72</h3>
           <p>Managing six daily medications for hypertension, diabetes, and arthritis. She needs large text, clear labels, and VoiceOver support. CRX was designed with Eleanor in mind first.</p>
         </div>
       </div>
       <div class="privacy-feature-item">
-        <span class="item-icon">👨</span>
+        <span class="item-icon" aria-hidden="true">👨</span>
         <div>
-          <h4>Marcus, 45</h4>
+          <h3>Marcus, 45</h3>
           <p>A caregiver helping his mother stay on schedule from across town. He needs to see her doses, get an alert when one is missed, and help log — with her consent, at the permission level she chooses.</p>
         </div>
       </div>
       <div class="privacy-feature-item">
-        <span class="item-icon">👩</span>
+        <span class="item-icon" aria-hidden="true">👩</span>
         <div>
-          <h4>Sarah, 31</h4>
+          <h3>Sarah, 31</h3>
           <p>Managing a complex regimen for a chronic condition. She wants interaction checking, symptom tracking, and a privacy-first app that doesn't sell her health data.</p>
         </div>
       </div>
