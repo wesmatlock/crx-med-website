@@ -7,7 +7,7 @@ permalink: /about/
 
 <div class="container">
 
-  <div style="max-width: 720px; margin: 0 auto;">
+  <div class="content-narrow">
 
     <h2>What CRX Is</h2>
     <p>CRX is an iOS app for tracking medications — schedules, reminders, refills, symptoms — and for safely sharing that picture with the people who help you. It's built for real people managing real regimens: older adults, anyone living with a chronic condition, and the caregivers supporting them.</p>

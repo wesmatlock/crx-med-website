@@ -89,7 +89,7 @@
   color: var(--color-accent-secondary, #A8DADC);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-8);
