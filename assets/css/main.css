@@ -82,10 +82,10 @@ main {
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -48px;
   left: 0;
   background: var(--color-accent-primary);
-  color: white;
+  color: var(--color-on-accent);
   padding: 8px 16px;
   text-decoration: none;
   border-radius: 0 0 4px 0;
@@ -194,6 +194,14 @@ main {
     background: none;
     -webkit-text-fill-color: var(--color-text-primary);
     color: var(--color-text-primary);
+  }
+}
+
+@media (forced-colors: active) {
+  .hero-title,
+  .section-title.gradient {
+    background: none;
+    -webkit-text-fill-color: currentColor;
   }
 }
 

@@ -27,7 +27,7 @@
   margin-bottom: var(--space-12);
 }
 
-.footer-section h4 {
+.footer-section h2 {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   color: white;
@@ -89,7 +89,7 @@
   color: var(--color-accent-secondary, #A8DADC);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-8);

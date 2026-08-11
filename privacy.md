@@ -5,7 +5,7 @@ permalink: /privacy/
 ---
 
 <div class="container">
-  <div style="max-width: 720px; margin: 0 auto;">
+  <div class="content-narrow">
 
     <p><em>Last updated: July 17, 2026</em></p>
     <p><em>This policy is consistent with the in-app privacy summary (version 2026.07.02) that users review and accept inside CRX. The documents you accept in the app govern your use of CRX; this page is the hosted, expanded version of the same policy.</em></p>

@@ -7,9 +7,11 @@
      CRX BRAND COLORS - Calm Medical Palette
      ========================================================================== */
 
-  --color-accent-primary: #2E86AB;         /* Calm teal-blue - primary actions */
+  --color-accent-primary: #256B85;         /* Calm teal-blue - primary actions */
   --color-accent-secondary: #A8DADC;       /* Soft teal - secondary elements */
   --color-accent-navy: #457B9D;            /* Muted navy - accents */
+  --color-link-hover: #1D566C;
+  --color-on-accent: #FFFFFF;
 
   /* Alpha variants */
   --color-accent-primary-alpha: rgba(46, 134, 171, 0.1);
@@ -23,7 +25,7 @@
   --color-border: #D1E3EC;
   --color-text-primary: #1A2D3D;
   --color-text-secondary: #3D5A6E;
-  --color-text-tertiary: #6B8FA3;
+  --color-text-tertiary: #4F7386;
 
   /* Dark Mode */
   --color-dark-background: #0D1B2A;
@@ -32,8 +34,10 @@
   --color-dark-border: #1E3347;
   --color-dark-text-primary: #D6EAF0;
   --color-dark-text-secondary: #8AABB8;
-  --color-dark-text-tertiary: #5E8091;
+  --color-dark-text-tertiary: #7FA3B5;
   --color-dark-accent-primary: #4AADCE;
+  --color-dark-link-hover: #A8DADC;
+  --color-dark-on-accent: #0D1B2A;
 
   /* State Colors */
   --color-success: #2D9B6B;
@@ -184,6 +188,8 @@
     --color-text-secondary: var(--color-dark-text-secondary);
     --color-text-tertiary: var(--color-dark-text-tertiary);
     --color-accent-primary: var(--color-dark-accent-primary);
+    --color-link-hover: var(--color-dark-link-hover);
+    --color-on-accent: var(--color-dark-on-accent);
   }
 }
 
@@ -196,4 +202,6 @@
   --color-text-secondary: var(--color-dark-text-secondary);
   --color-text-tertiary: var(--color-dark-text-tertiary);
   --color-accent-primary: var(--color-dark-accent-primary);
+  --color-link-hover: var(--color-dark-link-hover);
+  --color-on-accent: var(--color-dark-on-accent);
 }

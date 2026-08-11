@@ -6,7 +6,7 @@ permalink: /support/
 ---
 
 <div class="container">
-  <div style="max-width: 720px; margin: 0 auto;">
+  <div class="content-narrow">
 
     <h2>Contact Us</h2>
     <p>Email us at <a href="mailto:{{ site.email }}">{{ site.email }}</a> for help with anything — setup, caregiver connections, subscriptions, or your data. We aim to reply within 1–2 business days.</p>

@@ -13,7 +13,8 @@
   {% seo %}
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/app-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="64x64" href="{{ '/assets/images/favicon-64.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 
   {% feed_meta %}
 
@@ -36,27 +37,21 @@
     },
     "featureList": [
       "Dose Tracking and Smart Reminders",
-      "Interactive Widgets and Live Activity",
+      "Today View",
+      "Interactive Widgets, Live Activity, and Siri Shortcuts",
       "AI Drug Interaction Safety Checks",
       "Caregiver Sharing",
-      "Prescription Label and Barcode Scanning",
       "Symptom Tracking and Insights",
+      "Prescription Label and Barcode Scanning",
       "Pharmacy and Refill Tracking",
       "Apple Health Integration",
-      "VoiceOver and Accessibility Support"
+      "Doctor Visit PDF Export",
+      "Offline Support",
+      "VoiceOver and Accessibility in 7 Languages"
     ]
   }
   </script>
 
-  <style>
-    :root {
-      --brand-primary: {{ site.brand.colors.primary }};
-      --brand-secondary: {{ site.brand.colors.secondary }};
-      --brand-accent: {{ site.brand.colors.accent }};
-      --brand-success: {{ site.brand.colors.success }};
-      --brand-warning: {{ site.brand.colors.warning }};
-    }
-  </style>
 </head>
 
 <body>
@@ -70,11 +65,13 @@
           {% for path in site.header_pages %}
             {% assign my_page = site.pages | where: "path", path | first %}
             {% if my_page.title %}
-              <a href="{{ my_page.url | relative_url }}" class="navbar-link">{{ my_page.title | escape }}</a>
+              <a href="{{ my_page.url | relative_url }}" class="navbar-link"{% if page.url == my_page.url %} aria-current="page"{% endif %}>{{ my_page.title | escape }}</a>
             {% endif %}
           {% endfor %}
           {% if site.app.status == "coming_soon" %}
-            <span class="coming-soon-badge">Coming Soon</span>
+            <a href="mailto:{{ site.email }}?subject=CRX Launch Notification" class="btn btn-primary btn-sm">Notify Me at Launch</a>
+          {% else %}
+            <a href="{{ site.app.store_url }}" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Download</a>
           {% endif %}
         </div>
       </nav>
@@ -97,7 +94,7 @@
         </div>
         <div class="footer-grid">
           <div class="footer-section">
-            <h4>{{ site.app.name }}</h4>
+            <h2>{{ site.app.name }}</h2>
             <p>{{ site.description }}</p>
             <div class="footer-app-store-wrapper">
               {% if site.app.status == "coming_soon" %}
@@ -111,7 +108,7 @@
           </div>
 
           <div class="footer-section">
-            <h4>Quick Links</h4>
+            <h2>Quick Links</h2>
             <ul>
               {% for path in site.header_pages %}
                 {% assign my_page = site.pages | where: "path", path | first %}
@@ -123,7 +120,7 @@
           </div>
 
           <div class="footer-section">
-            <h4>Features</h4>
+            <h2>Features</h2>
             <ul>
               <li><a href="/#scheduling">Smart Scheduling</a></li>
               <li><a href="/#safety">Drug Safety</a></li>
@@ -134,7 +131,7 @@
           </div>
 
           <div class="footer-section">
-            <h4>Connect</h4>
+            <h2>Connect</h2>
             <ul>
               {% if site.email %}
                 <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
@@ -145,7 +142,7 @@
         </div>
 
         <div class="footer-bottom">
-          <p>CRX is not a medical device and does not provide medical advice. Always consult your physician or pharmacist. In an emergency, call 911.</p>
+          <p>CRX is not a medical device and does not provide medical advice. Always consult your physician or pharmacist about your medications. Reminders depend on your device and are not guaranteed. In an emergency, call 911.</p>
           <p>&copy; {{ 'now' | date: "%Y" }} CRX by Insoc. All rights reserved. |
              <a href="/privacy/">Privacy Policy</a> |
              <a href="/terms/">Terms of Service</a>

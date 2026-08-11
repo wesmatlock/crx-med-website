@@ -7,11 +7,12 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
 <section class="hero" id="hero">
   <div class="hero-content">
     <img
-      src="{{ '/assets/images/app-icon.png' | relative_url }}"
+      src="{{ '/assets/images/app-icon-240.png' | relative_url }}"
       alt="CRX App Icon"
-      class="hero-app-icon animate-fade-in-up"
+      class="hero-app-icon"
       width="120"
       height="120"
+      fetchpriority="high"
     >
 
     {% if site.app.status == "coming_soon" %}
@@ -21,35 +22,142 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
     </div>
     {% endif %}
 
-    <h1 class="hero-title">CRX</h1>
-    <p class="hero-subtitle">Medication Management</p>
+    <h1 class="hero-title">Medication management, made calm.</h1>
     <p class="hero-description">
-      {{ site.app.tagline }}
+      CRX is an iOS app that tracks every dose, reminds you at the right time, checks for drug interactions, and keeps caregivers in the loop — private by design.
     </p>
 
-    <div class="hero-stats">
-      <div class="hero-stat-card reveal">
-        <span class="stat-icon" aria-hidden="true">💊</span>
-        <span class="stat-value">Every Dose, Tracked</span>
-        <span class="stat-label">Reminders, widgets, Live Activity</span>
-      </div>
-      <div class="hero-stat-card reveal reveal-delay-1">
-        <span class="stat-icon" aria-hidden="true">♿️</span>
-        <span class="stat-value">Accessibility First</span>
-        <span class="stat-label">Designed for everyone</span>
-      </div>
-      <div class="hero-stat-card reveal reveal-delay-2">
-        <span class="stat-icon" aria-hidden="true">🔒</span>
-        <span class="stat-value">Privacy Focused</span>
-        <span class="stat-label">No ads, no tracking, no data sales</span>
-      </div>
-    </div>
+    <ul class="hero-pills reveal" role="list">
+      <li><span aria-hidden="true">💊</span> Every dose, tracked</li>
+      <li><span aria-hidden="true">👨‍👩‍👧</span> Caregivers in the loop</li>
+      <li><span aria-hidden="true">🔒</span> No ads, no tracking</li>
+    </ul>
 
     <div class="notify-card reveal">
-      <h3>Be the first to know</h3>
+      <p class="notify-title">Be the first to know</p>
       <p>CRX is coming to the App Store soon. Email us and we'll let you know when it launches.</p>
-      <a href="mailto:{{ site.email }}?subject=CRX Launch Notification" class="btn btn-primary">Notify Me</a>
+      <a href="mailto:{{ site.email }}?subject=CRX Launch Notification" class="btn btn-primary">Notify Me at Launch</a>
       <p class="privacy-note">No spam. We only use your email to tell you about the launch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="screenshots-section" id="screenshots">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Preview</span>
+      <h2 class="section-title">See CRX at a glance</h2>
+      <p class="section-subtitle">
+        Illustrative previews — App Store screenshots arrive at launch.
+      </p>
+    </div>
+
+    <div class="mockups-grid">
+      <figure class="app-mockup reveal">
+        <div class="device-frame" aria-hidden="true">
+          <div class="device-screen" data-screen="today">
+            <div class="screen-status"><span>9:41</span><span>●●●</span></div>
+            <span class="screen-title">Today</span>
+            <div class="screen-card">
+              <div class="screen-row">
+                <span class="med-dot"></span>
+                <span class="screen-med-name">Lisinopril 10 mg</span>
+                <span class="screen-chip chip-time">8:00 AM</span>
+              </div>
+              <div class="screen-take-btn">Take</div>
+            </div>
+            <span class="screen-section-label">Morning</span>
+            <div class="screen-card screen-row">
+              <span class="screen-med-name">Metformin 500 mg</span>
+              <span class="screen-chip chip-success">✓ Taken</span>
+            </div>
+            <span class="screen-section-label">Evening</span>
+            <div class="screen-card screen-row">
+              <span class="screen-med-name">Atorvastatin 20 mg</span>
+              <span class="screen-chip chip-time">9:00 PM</span>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          <span class="mockup-title">Today View</span>
+          <span class="mockup-desc">Your day's doses at a glance</span>
+        </figcaption>
+      </figure>
+
+      <figure class="app-mockup reveal reveal-delay-1">
+        <div class="device-frame" aria-hidden="true">
+          <div class="device-screen" data-screen="safety">
+            <div class="screen-status"><span>9:41</span><span>●●●</span></div>
+            <span class="screen-title">Safety Report</span>
+            <div class="screen-card screen-card-success">
+              <span class="screen-med-name">✓ No critical interactions</span>
+              <span class="screen-sub">8 medications checked</span>
+            </div>
+            <div class="screen-card">
+              <div class="screen-row">
+                <span class="screen-med-name">Metformin</span>
+                <span class="screen-chip chip-warning">Take with food</span>
+              </div>
+              <span class="screen-sub">Food helps absorption</span>
+            </div>
+            <div class="screen-card">
+              <div class="screen-row">
+                <span class="screen-med-name">Ibuprofen</span>
+                <span class="screen-chip chip-warning">Check timing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          <span class="mockup-title">Safety Report</span>
+          <span class="mockup-desc">Interaction checks in plain language</span>
+        </figcaption>
+      </figure>
+
+      <figure class="app-mockup reveal reveal-delay-2">
+        <div class="device-frame" aria-hidden="true">
+          <div class="device-screen" data-screen="caregiver">
+            <div class="screen-status"><span>9:41</span><span>●●●</span></div>
+            <span class="screen-title">Caring For</span>
+            <div class="screen-card screen-row">
+              <span class="screen-avatar">E</span>
+              <span class="screen-med-name">Eleanor<span class="screen-sub">Sharing with you</span></span>
+            </div>
+            <div class="screen-ring"><span>86%</span></div>
+            <span class="screen-big-label">This week's adherence</span>
+            <div class="screen-card screen-row">
+              <span class="screen-med-name">Missed-dose alerts</span>
+              <span class="screen-chip chip-success">On</span>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          <span class="mockup-title">Caregiver View</span>
+          <span class="mockup-desc">Support someone you love — with CRX Plus</span>
+        </figcaption>
+      </figure>
+
+      <figure class="app-mockup reveal reveal-delay-3">
+        <div class="device-frame" aria-hidden="true">
+          <div class="device-screen" data-screen="insights">
+            <div class="screen-status"><span>9:41</span><span>●●●</span></div>
+            <span class="screen-title">Insights</span>
+            <span class="screen-big-stat">94%</span>
+            <span class="screen-big-label">30-day adherence</span>
+            <div class="screen-bars">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="screen-card screen-row">
+              <span class="screen-med-name">Streak</span>
+              <span class="screen-chip chip-success">12 days</span>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          <span class="mockup-title">Insights</span>
+          <span class="mockup-desc">Adherence and symptom patterns</span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -96,40 +204,43 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
         <p>Log how you feel, track adherence over time, spot patterns, and export a summary PDF for your next doctor visit.</p>
       </div>
     </div>
+
+    <div class="feature-mini-grid">
+      <div class="feature-mini">
+        <span aria-hidden="true">🌅</span>
+        <div><strong>Today View</strong> Your whole day at a glance</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">🏪</span>
+        <div><strong>Pharmacy &amp; Refills</strong> Refill reminders a week before you run out</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">❤️</span>
+        <div><strong>Apple Health</strong> Optional HealthKit sync, under your control</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">📄</span>
+        <div><strong>Doctor Visit Export</strong> Medication summary PDF for appointments</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">📵</span>
+        <div><strong>Works Offline</strong> View and log without a connection</div>
+      </div>
+      <div class="feature-mini">
+        <span aria-hidden="true">🌍</span>
+        <div><strong>7 Languages</strong> Plus full VoiceOver support</div>
+      </div>
+    </div>
+
+    <p class="features-more"><a href="/features/">See all features →</a></p>
   </div>
 </section>
 
-<section class="screenshots-section" id="screenshots">
+<section class="plus-section">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Preview</span>
-      <h2 class="section-title">Screenshots coming soon</h2>
-      <p class="section-subtitle">
-        A clean, calm interface — screenshots arrive with the App Store launch.
-      </p>
-    </div>
-
-    <div class="screenshots-placeholder-grid">
-      <div class="screenshot-placeholder reveal">
-        <span class="placeholder-icon" aria-hidden="true">💊</span>
-        <span class="placeholder-label">Today View</span>
-        <p class="placeholder-desc">Your day's doses at a glance</p>
-      </div>
-      <div class="screenshot-placeholder reveal reveal-delay-1">
-        <span class="placeholder-icon" aria-hidden="true">🛡️</span>
-        <span class="placeholder-label">Safety Report</span>
-        <p class="placeholder-desc">Interaction checks in plain language</p>
-      </div>
-      <div class="screenshot-placeholder reveal reveal-delay-2">
-        <span class="placeholder-icon" aria-hidden="true">👨‍👩‍👧</span>
-        <span class="placeholder-label">Caregiver View</span>
-        <p class="placeholder-desc">Support someone you love</p>
-      </div>
-      <div class="screenshot-placeholder reveal reveal-delay-3">
-        <span class="placeholder-icon" aria-hidden="true">📊</span>
-        <span class="placeholder-label">Insights</span>
-        <p class="placeholder-desc">Adherence and symptom patterns</p>
-      </div>
+    <div class="notify-card plus-card reveal">
+      <p class="notify-title">Free for you. CRX Plus for the people who help.</p>
+      <p>CRX is free to download and use for managing your own medications. CRX Plus is an optional subscription that unlocks premium caregiver features — sharing with someone you trust, missed-dose alerts, and caregiver notes. Managed and billed through your Apple ID, cancel anytime in Settings. Pricing will be announced at launch.</p>
     </div>
   </div>
 </section>
@@ -182,28 +293,28 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
       <div class="privacy-feature-item reveal">
         <span class="item-icon" aria-hidden="true">🚫</span>
         <div>
-          <h4>No Ads, No Tracking, No Data Sales</h4>
+          <h3>No Ads, No Tracking, No Data Sales</h3>
           <p>CRX shows no ads, uses no advertising identifiers, and never sells your health information.</p>
         </div>
       </div>
       <div class="privacy-feature-item reveal reveal-delay-1">
         <span class="item-icon" aria-hidden="true">🤝</span>
         <div>
-          <h4>Sharing Only With Your Consent</h4>
+          <h3>Sharing Only With Your Consent</h3>
           <p>Caregivers see your information only after you approve them — with the permission level you choose, revocable anytime.</p>
         </div>
       </div>
       <div class="privacy-feature-item reveal reveal-delay-2">
         <span class="item-icon" aria-hidden="true">📵</span>
         <div>
-          <h4>Works Offline</h4>
+          <h3>Works Offline</h3>
           <p>View your schedule and log doses without a connection. Your data syncs securely when you're back online.</p>
         </div>
       </div>
       <div class="privacy-feature-item reveal reveal-delay-3">
         <span class="item-icon" aria-hidden="true">🗑️</span>
         <div>
-          <h4>Delete Anytime</h4>
+          <h3>Delete Anytime</h3>
           <p>Delete your account right in the app, and your data is removed from our servers. Optional AI safety checks can run on-device with Apple Intelligence, or be turned off entirely.</p>
         </div>
       </div>
@@ -215,11 +326,8 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
   <div class="container">
     <h2>Be the first to know when CRX launches</h2>
     <p>The medication manager built for clarity, calm, and everyone — coming soon to the App Store.</p>
-    <a href="mailto:{{ site.email }}?subject=CRX Early Access" class="btn-white">
-      Get Notified
+    <a href="mailto:{{ site.email }}?subject=CRX Launch Notification" class="btn-white">
+      Notify Me at Launch
     </a>
-    <p style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.85; max-width: 640px; margin-left: auto; margin-right: auto;">
-      CRX is not a medical device and does not provide medical advice. Always consult your physician or pharmacist about your medications. In an emergency, call 911. Reminders depend on your device and are not guaranteed.
-    </p>
   </div>
 </section>

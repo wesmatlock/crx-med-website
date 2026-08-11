@@ -1,30 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile navigation
-  const toggle = document.querySelector('.mobile-menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
-
-  if (toggle && mobileMenu) {
-    toggle.addEventListener('click', function() {
-      toggle.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-    });
-
-    const mobileLinks = mobileMenu.querySelectorAll('.mobile-menu-link');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        toggle.classList.remove('active');
-        mobileMenu.classList.remove('active');
-      });
-    });
-
-    document.addEventListener('click', function(event) {
-      if (!toggle.contains(event.target) && !mobileMenu.contains(event.target)) {
-        toggle.classList.remove('active');
-        mobileMenu.classList.remove('active');
-      }
-    });
-  }
-
   // Smooth scroll for anchor links
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
   anchorLinks.forEach(link => {
