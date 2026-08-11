@@ -65,7 +65,7 @@
 
 .btn-primary {
   background: var(--color-accent-primary);
-  color: #ffffff;
+  color: var(--color-on-accent);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-accent-primary);
 }
@@ -96,6 +96,16 @@
 .btn-primary:active {
   transform: translateY(0);
   box-shadow: var(--shadow-base);
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn-primary::before {
+    background: color-mix(in srgb, var(--color-accent-primary) 85%, black);
+  }
+}
+
+[data-theme="dark"] .btn-primary::before {
+  background: color-mix(in srgb, var(--color-accent-primary) 85%, black);
 }
 
 /* ==========================================================================
@@ -133,7 +143,7 @@
 
 .btn-outline:hover {
   background: var(--color-accent-primary);
-  color: #ffffff;
+  color: var(--color-on-accent);
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
@@ -215,7 +225,7 @@
 
 .btn-notify {
   background: var(--color-accent-primary);
-  color: #ffffff;
+  color: var(--color-on-accent);
   padding: var(--space-3) var(--space-6);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);

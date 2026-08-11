@@ -16,10 +16,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-sass:
-  sass_dir: _sass
-  style: compressed
-
 safe: true
 incremental: false
 
@@ -40,14 +36,6 @@ app:
   status: "coming_soon"
 
 email: support@crx-med.com
-
-brand:
-  colors:
-    primary: "#2E86AB"
-    secondary: "#A8DADC"
-    accent: "#457B9D"
-    success: "#2D9B6B"
-    warning: "#F4A261"
 
 exclude:
   - Gemfile
