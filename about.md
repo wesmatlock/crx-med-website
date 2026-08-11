@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About CRX
+title: About
 subtitle: "Built because medication management deserves better."
 permalink: /about/
 ---

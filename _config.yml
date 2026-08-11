@@ -22,8 +22,6 @@ incremental: false
 header_pages:
   - features.md
   - about.md
-  - privacy.md
-  - terms.md
   - support.md
 
 app:

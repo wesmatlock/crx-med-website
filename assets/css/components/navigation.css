@@ -55,6 +55,11 @@ header {
   color: var(--color-accent-primary);
 }
 
+.navbar-link[aria-current="page"] {
+  color: var(--color-accent-primary);
+  background: var(--color-accent-primary-alpha);
+}
+
 @media (max-width: 600px) {
   .navbar-simple {
     flex-direction: column;
