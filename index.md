@@ -7,11 +7,12 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
 <section class="hero" id="hero">
   <div class="hero-content">
     <img
-      src="{{ '/assets/images/app-icon.png' | relative_url }}"
+      src="{{ '/assets/images/app-icon-240.png' | relative_url }}"
       alt="CRX App Icon"
       class="hero-app-icon"
       width="120"
       height="120"
+      fetchpriority="high"
     >
 
     {% if site.app.status == "coming_soon" %}

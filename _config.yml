@@ -35,6 +35,12 @@ app:
 
 email: support@crx-med.com
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/app-icon.png
+
 exclude:
   - Gemfile
   - Gemfile.lock
