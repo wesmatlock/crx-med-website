@@ -41,6 +41,126 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
   </div>
 </section>
 
+<section class="screenshots-section" id="screenshots">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Preview</span>
+      <h2 class="section-title">See CRX at a glance</h2>
+      <p class="section-subtitle">
+        Illustrative previews — App Store screenshots arrive at launch.
+      </p>
+    </div>
+
+    <div class="mockups-grid">
+      <figure class="app-mockup reveal">
+        <div class="device-frame" aria-hidden="true">
+          <div class="device-screen" data-screen="today">
+            <div class="screen-status"><span>9:41</span><span>●●●</span></div>
+            <span class="screen-title">Today</span>
+            <div class="screen-card">
+              <div class="screen-row">
+                <span class="med-dot"></span>
+                <span class="screen-med-name">Lisinopril 10 mg</span>
+                <span class="screen-chip chip-time">8:00 AM</span>
+              </div>
+              <div class="screen-take-btn">Take</div>
+            </div>
+            <span class="screen-section-label">Morning</span>
+            <div class="screen-card screen-row">
+              <span class="screen-med-name">Metformin 500 mg</span>
+              <span class="screen-chip chip-success">✓ Taken</span>
+            </div>
+            <span class="screen-section-label">Evening</span>
+            <div class="screen-card screen-row">
+              <span class="screen-med-name">Atorvastatin 20 mg</span>
+              <span class="screen-chip chip-time">9:00 PM</span>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          <span class="mockup-title">Today View</span>
+          <span class="mockup-desc">Your day's doses at a glance</span>
+        </figcaption>
+      </figure>
+
+      <figure class="app-mockup reveal reveal-delay-1">
+        <div class="device-frame" aria-hidden="true">
+          <div class="device-screen" data-screen="safety">
+            <div class="screen-status"><span>9:41</span><span>●●●</span></div>
+            <span class="screen-title">Safety Report</span>
+            <div class="screen-card screen-card-success">
+              <span class="screen-med-name">✓ No critical interactions</span>
+              <span class="screen-sub">8 medications checked</span>
+            </div>
+            <div class="screen-card">
+              <div class="screen-row">
+                <span class="screen-med-name">Metformin</span>
+                <span class="screen-chip chip-warning">Take with food</span>
+              </div>
+              <span class="screen-sub">Food helps absorption</span>
+            </div>
+            <div class="screen-card">
+              <div class="screen-row">
+                <span class="screen-med-name">Ibuprofen</span>
+                <span class="screen-chip chip-warning">Check timing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          <span class="mockup-title">Safety Report</span>
+          <span class="mockup-desc">Interaction checks in plain language</span>
+        </figcaption>
+      </figure>
+
+      <figure class="app-mockup reveal reveal-delay-2">
+        <div class="device-frame" aria-hidden="true">
+          <div class="device-screen" data-screen="caregiver">
+            <div class="screen-status"><span>9:41</span><span>●●●</span></div>
+            <span class="screen-title">Caring For</span>
+            <div class="screen-card screen-row">
+              <span class="screen-avatar">E</span>
+              <span class="screen-med-name">Eleanor<span class="screen-sub">Sharing with you</span></span>
+            </div>
+            <div class="screen-ring"><span>86%</span></div>
+            <span class="screen-big-label">This week's adherence</span>
+            <div class="screen-card screen-row">
+              <span class="screen-med-name">Missed-dose alerts</span>
+              <span class="screen-chip chip-success">On</span>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          <span class="mockup-title">Caregiver View</span>
+          <span class="mockup-desc">Support someone you love — with CRX Plus</span>
+        </figcaption>
+      </figure>
+
+      <figure class="app-mockup reveal reveal-delay-3">
+        <div class="device-frame" aria-hidden="true">
+          <div class="device-screen" data-screen="insights">
+            <div class="screen-status"><span>9:41</span><span>●●●</span></div>
+            <span class="screen-title">Insights</span>
+            <span class="screen-big-stat">94%</span>
+            <span class="screen-big-label">30-day adherence</span>
+            <div class="screen-bars">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="screen-card screen-row">
+              <span class="screen-med-name">Streak</span>
+              <span class="screen-chip chip-success">12 days</span>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          <span class="mockup-title">Insights</span>
+          <span class="mockup-desc">Adherence and symptom patterns</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section class="features-section" id="features">
   <div class="container">
     <div class="section-header">
@@ -81,41 +201,6 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
         <span class="card-icon" aria-hidden="true">📊</span>
         <h3>Symptoms &amp; Insights</h3>
         <p>Log how you feel, track adherence over time, spot patterns, and export a summary PDF for your next doctor visit.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="screenshots-section" id="screenshots">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Preview</span>
-      <h2 class="section-title">Screenshots coming soon</h2>
-      <p class="section-subtitle">
-        A clean, calm interface — screenshots arrive with the App Store launch.
-      </p>
-    </div>
-
-    <div class="screenshots-placeholder-grid">
-      <div class="screenshot-placeholder reveal">
-        <span class="placeholder-icon" aria-hidden="true">💊</span>
-        <span class="placeholder-label">Today View</span>
-        <p class="placeholder-desc">Your day's doses at a glance</p>
-      </div>
-      <div class="screenshot-placeholder reveal reveal-delay-1">
-        <span class="placeholder-icon" aria-hidden="true">🛡️</span>
-        <span class="placeholder-label">Safety Report</span>
-        <p class="placeholder-desc">Interaction checks in plain language</p>
-      </div>
-      <div class="screenshot-placeholder reveal reveal-delay-2">
-        <span class="placeholder-icon" aria-hidden="true">👨‍👩‍👧</span>
-        <span class="placeholder-label">Caregiver View</span>
-        <p class="placeholder-desc">Support someone you love</p>
-      </div>
-      <div class="screenshot-placeholder reveal reveal-delay-3">
-        <span class="placeholder-icon" aria-hidden="true">📊</span>
-        <span class="placeholder-label">Insights</span>
-        <p class="placeholder-desc">Adherence and symptom patterns</p>
       </div>
     </div>
   </div>
