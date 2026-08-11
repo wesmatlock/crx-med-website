@@ -21,34 +21,21 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
     </div>
     {% endif %}
 
-    <h1 class="hero-title">CRX</h1>
-    <p class="hero-subtitle">Medication Management</p>
+    <h1 class="hero-title">Medication management, made calm.</h1>
     <p class="hero-description">
-      {{ site.app.tagline }}
+      CRX is an iOS app that tracks every dose, reminds you at the right time, checks for drug interactions, and keeps caregivers in the loop — private by design.
     </p>
 
-    <div class="hero-stats">
-      <div class="hero-stat-card reveal">
-        <span class="stat-icon" aria-hidden="true">💊</span>
-        <span class="stat-value">Every Dose, Tracked</span>
-        <span class="stat-label">Reminders, widgets, Live Activity</span>
-      </div>
-      <div class="hero-stat-card reveal reveal-delay-1">
-        <span class="stat-icon" aria-hidden="true">♿️</span>
-        <span class="stat-value">Accessibility First</span>
-        <span class="stat-label">Designed for everyone</span>
-      </div>
-      <div class="hero-stat-card reveal reveal-delay-2">
-        <span class="stat-icon" aria-hidden="true">🔒</span>
-        <span class="stat-value">Privacy Focused</span>
-        <span class="stat-label">No ads, no tracking, no data sales</span>
-      </div>
-    </div>
+    <ul class="hero-pills reveal" role="list">
+      <li><span aria-hidden="true">💊</span> Every dose, tracked</li>
+      <li><span aria-hidden="true">👨‍👩‍👧</span> Caregivers in the loop</li>
+      <li><span aria-hidden="true">🔒</span> No ads, no tracking</li>
+    </ul>
 
     <div class="notify-card reveal">
-      <h3>Be the first to know</h3>
+      <p class="notify-title">Be the first to know</p>
       <p>CRX is coming to the App Store soon. Email us and we'll let you know when it launches.</p>
-      <a href="mailto:{{ site.email }}?subject=CRX Launch Notification" class="btn btn-primary">Notify Me</a>
+      <a href="mailto:{{ site.email }}?subject=CRX Launch Notification" class="btn btn-primary">Notify Me at Launch</a>
       <p class="privacy-note">No spam. We only use your email to tell you about the launch.</p>
     </div>
   </div>
@@ -215,8 +202,8 @@ description: "CRX is an iOS medication management app built for clarity, calm, a
   <div class="container">
     <h2>Be the first to know when CRX launches</h2>
     <p>The medication manager built for clarity, calm, and everyone — coming soon to the App Store.</p>
-    <a href="mailto:{{ site.email }}?subject=CRX Early Access" class="btn-white">
-      Get Notified
+    <a href="mailto:{{ site.email }}?subject=CRX Launch Notification" class="btn-white">
+      Notify Me at Launch
     </a>
     <p style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.85; max-width: 640px; margin-left: auto; margin-right: auto;">
       CRX is not a medical device and does not provide medical advice. Always consult your physician or pharmacist about your medications. In an emergency, call 911. Reminders depend on your device and are not guaranteed.
