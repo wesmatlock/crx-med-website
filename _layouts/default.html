@@ -94,7 +94,7 @@
         </div>
         <div class="footer-grid">
           <div class="footer-section">
-            <h4>{{ site.app.name }}</h4>
+            <h2>{{ site.app.name }}</h2>
             <p>{{ site.description }}</p>
             <div class="footer-app-store-wrapper">
               {% if site.app.status == "coming_soon" %}
@@ -108,7 +108,7 @@
           </div>
 
           <div class="footer-section">
-            <h4>Quick Links</h4>
+            <h2>Quick Links</h2>
             <ul>
               {% for path in site.header_pages %}
                 {% assign my_page = site.pages | where: "path", path | first %}
@@ -120,7 +120,7 @@
           </div>
 
           <div class="footer-section">
-            <h4>Features</h4>
+            <h2>Features</h2>
             <ul>
               <li><a href="/#scheduling">Smart Scheduling</a></li>
               <li><a href="/#safety">Drug Safety</a></li>
@@ -131,7 +131,7 @@
           </div>
 
           <div class="footer-section">
-            <h4>Connect</h4>
+            <h2>Connect</h2>
             <ul>
               {% if site.email %}
                 <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>

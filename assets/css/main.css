@@ -82,7 +82,7 @@ main {
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -48px;
   left: 0;
   background: var(--color-accent-primary);
   color: var(--color-on-accent);

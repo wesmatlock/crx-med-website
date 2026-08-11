@@ -27,7 +27,7 @@
   margin-bottom: var(--space-12);
 }
 
-.footer-section h4 {
+.footer-section h2 {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   color: white;
