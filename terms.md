@@ -62,9 +62,6 @@ permalink: /terms/
     <h2>Termination</h2>
     <p>You can stop using CRX at any time and delete your account in the app. We may suspend or terminate access for violation of these terms.</p>
 
-    <h2>Governing Law</h2>
-    <p>These terms are governed by the laws of the United States and the state in which Insoc is established, without regard to conflict-of-law principles, except where the law of your place of residence necessarily applies.</p>
-
     <h2>Changes to These Terms</h2>
     <p>We may modify these terms. When we make a material change, we will notify you in the app and ask you to review and accept the updated terms before continuing to use CRX, and we will update this page.</p>
 
