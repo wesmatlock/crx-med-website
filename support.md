@@ -1,17 +1,17 @@
 ---
 layout: page
+description: "Get help with CRX: reminders, account deletion, data export, offline use, requirements, and languages."
 title: Support
 subtitle: "We're here to help."
 permalink: /support/
 ---
 
-<div class="container">
-  <div class="content-narrow">
+<div class="prose">
 
     <h2>Contact Us</h2>
     <p>Email us at <a href="mailto:{{ site.email }}">{{ site.email }}</a> for help with anything, including setup, reminders, or your data. We aim to reply within 1–2 business days.</p>
     <p>
-      <a href="mailto:{{ site.email }}" class="btn btn-primary" style="display: inline-flex; margin-top: 0.5rem;">
+      <a href="mailto:{{ site.email }}" class="btn">
         Email Support
       </a>
     </p>
@@ -49,4 +49,3 @@ permalink: /support/
     <p>Don't see your question answered here? We'd love to hear from you at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
 
   </div>
-</div>

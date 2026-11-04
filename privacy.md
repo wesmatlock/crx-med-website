@@ -1,11 +1,11 @@
 ---
 layout: page
+description: "What CRX collects, where it goes, which outside services process it, and the choices you have."
 title: Privacy Policy
 permalink: /privacy/
 ---
 
-<div class="container">
-  <div class="content-narrow">
+<div class="prose">
 
     <p><em>Last updated: November 4, 2026</em></p>
     <p><em>This page is the hosted, expanded version of the privacy summary (version 2026.07.23) that users review and accept inside CRX. The documents you accept in the app govern your use of CRX.</em></p>
@@ -109,4 +109,3 @@ permalink: /privacy/
     <p>Questions about privacy? Contact us at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
 
   </div>
-</div>

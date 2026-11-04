@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12181f" media="(prefers-color-scheme: dark)">
 
   {% if site.app.app_id != "" %}
   <meta name="apple-itunes-app" content="app-id={{ site.app.app_id }}, app-argument={{ page.url | absolute_url }}">
@@ -12,6 +14,7 @@
 
   {% seo %}
 
+  <link rel="preload" href="{{ '/assets/fonts/atkinson-hyperlegible-next-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="icon" type="image/png" sizes="64x64" href="{{ '/assets/images/favicon-64.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
@@ -36,7 +39,7 @@
       "priceCurrency": "USD"
     },
     "featureList": [
-      "Dose Tracking and Smart Reminders",
+      "Dose Tracking and Reminders",
       "Today View",
       "Interactive Widgets, Live Activity, and Siri Shortcuts",
       "AI Drug Interaction Safety Checks",
@@ -50,118 +53,53 @@
     ]
   }
   </script>
-
 </head>
 
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header>
-    <div class="container">
-      <nav class="navbar-simple">
-        <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.app.name }}</a>
-        <div class="navbar-links">
-          {% for path in site.header_pages %}
-            {% assign my_page = site.pages | where: "path", path | first %}
-            {% if my_page.title %}
-              <a href="{{ my_page.url | relative_url }}" class="navbar-link"{% if page.url == my_page.url %} aria-current="page"{% endif %}>{{ my_page.title | escape }}</a>
-            {% endif %}
-          {% endfor %}
-          {% if site.app.status == "coming_soon" %}
-            <a href="mailto:{{ site.email }}?subject=CRX Launch Notification" class="btn btn-primary btn-sm">Notify Me at Launch</a>
-          {% else %}
-            <a href="{{ site.app.store_url }}" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Download</a>
+  <header class="site-header">
+    <div class="wrap site-header-row">
+      <a class="brand" href="{{ "/" | relative_url }}">
+        <img src="{{ '/assets/images/app-icon-96.webp' | relative_url }}" alt="" width="40" height="40">
+        {{ site.app.name }}
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        {% for path in site.header_pages %}
+          {% assign my_page = site.pages | where: "path", path | first %}
+          {% if my_page.title %}
+            <a href="{{ my_page.url | relative_url }}"{% if page.url == my_page.url %} aria-current="page"{% endif %}>{{ my_page.title | escape }}</a>
           {% endif %}
-        </div>
+        {% endfor %}
       </nav>
     </div>
   </header>
 
-  <main id="main-content" class="page-content" aria-label="Content">
+  <main id="main-content">
     {{ content }}
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="mobile-footer-signup">
-          {% if site.app.status == "coming_soon" %}
-            <span class="coming-soon-badge">Coming Soon to App Store</span>
-          {% else %}
-            <a href="{{ site.app.store_url }}" class="btn btn-primary" target="_blank" rel="noopener">Download App</a>
-          {% endif %}
-        </div>
-        <div class="footer-grid">
-          <div class="footer-section">
-            <h2>{{ site.app.name }}</h2>
-            <p>{{ site.description }}</p>
-            <div class="footer-app-store-wrapper">
-              {% if site.app.status == "coming_soon" %}
-                <span class="coming-soon-badge">Coming Soon to App Store</span>
-              {% else %}
-                <a href="{{ site.app.store_url }}" class="btn-app-store" target="_blank" rel="noopener">
-                  <img src="{{ '/assets/images/app-store-badge.svg' | relative_url }}" alt="Download CRX on the App Store">
-                </a>
-              {% endif %}
-            </div>
-          </div>
-
-          <div class="footer-section">
-            <h2>Quick Links</h2>
-            <ul>
-              {% for path in site.header_pages %}
-                {% assign my_page = site.pages | where: "path", path | first %}
-                {% if my_page.title %}
-                  <li><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </div>
-
-          <div class="footer-section">
-            <h2>Features</h2>
-            <ul>
-              <li><a href="/#scheduling">Smart Scheduling</a></li>
-              <li><a href="/#safety">Drug Safety</a></li>
-              <li><a href="/#privacy">Privacy First</a></li>
-              <li><a href="/#accessibility">Accessibility</a></li>
-              <li><a href="/features/">All Features</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-section">
-            <h2>Connect</h2>
-            <ul>
-              {% if site.email %}
-                <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-              {% endif %}
-              <li><a href="/support/">Support</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>CRX is not a medical device and does not provide medical advice. Always consult your physician or pharmacist about your medications. Reminders depend on your device and are not guaranteed. In an emergency, call 911.</p>
-          <p>&copy; {{ 'now' | date: "%Y" }} CRX by Insoc. All rights reserved. |
-             <a href="/privacy/">Privacy Policy</a> |
-             <a href="/terms/">Terms of Service</a>
-          </p>
-        </div>
-      </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-notice">CRX is not a medical device and does not provide medical advice. Always consult your physician or pharmacist about your medications. Reminders depend on your device and are not guaranteed. In an emergency, call 911.</p>
+      {% if site.app.status != "coming_soon" %}
+      <a class="app-store-badge" href="{{ site.app.store_url }}" target="_blank" rel="noopener">
+        <img src="{{ '/assets/images/app-store-badge.svg' | relative_url }}" alt="Download CRX on the App Store" height="48">
+      </a>
+      {% endif %}
+      <ul class="footer-links">
+        <li><a href="/features/">Features</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/support/">Support</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      </ul>
+      <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} CRX by Insoc. All rights reserved.</p>
     </div>
   </footer>
 
-  {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
-    </script>
-  {% endif %}
-
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </body>
 
 </html>

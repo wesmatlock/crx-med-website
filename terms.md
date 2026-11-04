@@ -1,11 +1,11 @@
 ---
 layout: page
+description: "The terms for using CRX, including the medical disclaimer and limits on drug interaction information."
 title: Terms of Service
 permalink: /terms/
 ---
 
-<div class="container">
-  <div class="content-narrow">
+<div class="prose">
 
     <p><em>Last updated: November 4, 2026</em></p>
     <p><em>This page is the hosted, expanded version of the terms summary (version 2026.07.23) that users review and accept inside CRX. The documents you accept in the app govern your use of CRX.</em></p>
@@ -50,4 +50,3 @@ permalink: /terms/
     <p>Questions? Contact us at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
 
   </div>
-</div>
