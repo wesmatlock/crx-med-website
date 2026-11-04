@@ -11,7 +11,7 @@ permalink: /features/
     <div class="section-header" style="margin-bottom: 3rem;">
       <span class="section-label">Core Features</span>
       <h2 class="section-title gradient">Your Complete Medication Companion</h2>
-      <p class="section-subtitle">CRX brings together everything you need — from adding a prescription to staying on schedule to keeping caregivers in the loop — in a calm, accessible interface.</p>
+      <p class="section-subtitle">CRX covers the whole routine, from adding a prescription to logging doses to preparing for a doctor visit, in a calm, accessible interface.</p>
     </div>
 
     <div class="features-grid">
@@ -28,22 +28,22 @@ permalink: /features/
       <div class="card-feature reveal reveal-delay-2">
         <span class="card-icon" aria-hidden="true">📱</span>
         <h3>Widgets &amp; Live Activity</h3>
-        <p>Home Screen widgets show your next dose and today's schedule, and a Lock Screen Live Activity lets you take or skip a dose without unlocking your phone. Siri shortcuts work hands-free too.</p>
+        <p>Home Screen widgets show your next dose and today's schedule, and a Lock Screen Live Activity lets you log a dose without opening the app. Siri shortcuts can log doses too.</p>
       </div>
       <div class="card-feature reveal reveal-delay-3">
         <span class="card-icon" aria-hidden="true">🛡️</span>
         <h3>AI Drug-Safety Checks</h3>
-        <p>Optional AI analysis reviews your full medication list for potential drug-drug interactions, conflicts with your recorded allergies, and food interactions — summarized in plain language with practical recommendations. You can run it on-device with Apple Intelligence, use the cloud option, or turn it off. Informational only: always confirm with your doctor or pharmacist.</p>
+        <p>Optional AI analysis reviews your full medication list for potential drug-drug interactions, conflicts with your recorded allergies, and food interactions — summarized in plain language. Checks use a cloud AI model. Before the first check, CRX shows what it sends and lets you accept or turn the checks off. They may not catch every interaction, and a missing warning does not mean a combination is safe. Always check with your doctor or pharmacist.</p>
       </div>
       <div class="card-feature reveal">
-        <span class="card-icon" aria-hidden="true">👨‍👩‍👧</span>
-        <h3>Caregiver Sharing (CRX Plus)</h3>
-        <p>Invite someone you trust by code, QR, or text message. You choose their permission level — from view-only to helping manage medications — and can revoke access anytime. Caregivers can get missed-dose alerts, leave notes, and every action is recorded in an audit log you can see.</p>
+        <span class="card-icon" aria-hidden="true">🔍</span>
+        <h3>Pill Details</h3>
+        <p>See the color, shape, and imprint of each pill from FDA label data, so you can check the pill in your hand against your record.</p>
       </div>
       <div class="card-feature reveal reveal-delay-1">
         <span class="card-icon" aria-hidden="true">📈</span>
         <h3>Symptom Tracking &amp; Insights</h3>
-        <p>Log symptoms alongside your doses, then see adherence percentages, streaks, and patterns over 7, 30, or 90 days — including insights like which doses you tend to miss.</p>
+        <p>Log symptoms alongside your doses, then see adherence percentages and streaks over 7, 30, or 90 days, with your doses and symptoms charted side by side.</p>
       </div>
       <div class="card-feature reveal reveal-delay-2">
         <span class="card-icon" aria-hidden="true">📷</span>
@@ -58,22 +58,22 @@ permalink: /features/
       <div class="card-feature reveal">
         <span class="card-icon" aria-hidden="true">❤️</span>
         <h3>Apple Health</h3>
-        <p>Optionally sync dose records to Apple Health, and read and write vitals through HealthKit — entirely under your control.</p>
+        <p>Optionally write dose records to Apple Health, and let CRX read vitals like blood pressure, glucose, weight, and heart rate for Insights. You control both.</p>
       </div>
       <div class="card-feature reveal reveal-delay-1">
         <span class="card-icon" aria-hidden="true">📄</span>
         <h3>Doctor Visit Export</h3>
-        <p>Generate a medication summary PDF — current medications, schedules, safety analysis, and adherence — to share with your healthcare provider, plus CSV/PDF dose-history export.</p>
+        <p>Generate a PDF with your medications, dose history, refills, symptoms, and the drug safety analysis to share with your doctor or pharmacist, plus CSV dose-history export.</p>
       </div>
       <div class="card-feature reveal reveal-delay-2">
         <span class="card-icon" aria-hidden="true">📵</span>
         <h3>Works Offline</h3>
-        <p>Your medications, schedules, and history live on your device, so viewing and logging work without a connection. Changes sync securely across your devices when you're back online.</p>
+        <p>Your medications, schedules, and history live on your device, so viewing and logging work without a connection. Changes sync across your devices when you're back online. Medication search and cloud AI features need a connection.</p>
       </div>
       <div class="card-feature reveal reveal-delay-3">
         <span class="card-icon" aria-hidden="true">🌍</span>
         <h3>7 Languages</h3>
-        <p>CRX speaks English, German, Spanish, French, Italian, Dutch, and Portuguese (Brazil).</p>
+        <p>The interface is in English, German, Spanish, French, Italian, Dutch, and Portuguese (Brazil). Drug databases are U.S. sources, label scanning reads English text, and AI explanations are in English.</p>
       </div>
     </div>
 
@@ -84,14 +84,14 @@ permalink: /features/
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Built for Accessibility</h2>
-      <p class="section-subtitle">CRX was designed with accessibility as a first-class requirement from day one.</p>
+      <p class="section-subtitle">Accessibility is a core requirement for CRX, not an add-on.</p>
     </div>
 
     <div class="accessibility-grid">
       <div class="accessibility-card reveal">
         <span class="card-icon" aria-hidden="true">🔊</span>
-        <h3>Full VoiceOver Support</h3>
-        <p>Every element labeled, every flow navigable without sight — including scanning, which announces detected medications aloud.</p>
+        <h3>VoiceOver Support</h3>
+        <p>Controls and medication details are labeled for VoiceOver.</p>
       </div>
       <div class="accessibility-card reveal reveal-delay-1">
         <span class="card-icon" aria-hidden="true">Aa</span>
@@ -101,22 +101,17 @@ permalink: /features/
       <div class="accessibility-card reveal reveal-delay-2">
         <span class="card-icon" aria-hidden="true">🎬</span>
         <h3>Reduced Motion</h3>
-        <p>Respects the iOS Reduce Motion setting. No disorienting animations.</p>
+        <p>Respects the iOS Reduce Motion setting.</p>
       </div>
       <div class="accessibility-card reveal reveal-delay-3">
         <span class="card-icon" aria-hidden="true">🎯</span>
         <h3>Large Touch Targets</h3>
-        <p>Interactive elements meet or exceed Apple's 44pt minimum.</p>
+        <p>Tap targets are built to Apple's 44-point minimum.</p>
       </div>
       <div class="accessibility-card reveal">
         <span class="card-icon" aria-hidden="true">🎨</span>
         <h3>Never Color Alone</h3>
-        <p>Status is always shown with icons and text, never just color.</p>
-      </div>
-      <div class="accessibility-card reveal reveal-delay-1">
-        <span class="card-icon" aria-hidden="true">🔐</span>
-        <h3>Face ID / Touch ID Lock</h3>
-        <p>Optionally protect the app — and your health data — behind biometrics.</p>
+        <p>Status is designed to use icons and text, not just color.</p>
       </div>
     </div>
   </div>

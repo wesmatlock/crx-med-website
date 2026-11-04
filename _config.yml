@@ -2,7 +2,7 @@ title: "CRX"
 # jekyll-seo-tag builds the home page title as "title | tagline", falling back to the
 # full description when no tagline is set — which is how this became a 260-char <title>.
 tagline: "Medication management, made calm"
-description: "CRX is an iOS medication management app built for clarity, calm, and confidence. Track doses, get smart reminders, check drug interactions, and share safely with caregivers — privacy focused and designed for everyone."
+description: "CRX is an iOS medication app. Add medications by search or scan, get dose reminders, log symptoms, and run AI-assisted interaction checks. No ads, no data sales."
 baseurl: ""
 url: "https://crx-med.com"
 
@@ -33,7 +33,7 @@ app:
   store_url: ""
   status: "coming_soon"
 
-email: support@crx-med.com
+email: me@wesleymatlock.com
 
 defaults:
   - scope:

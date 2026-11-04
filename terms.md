@@ -7,8 +7,8 @@ permalink: /terms/
 <div class="container">
   <div class="content-narrow">
 
-    <p><em>Last updated: July 17, 2026</em></p>
-    <p><em>These terms are consistent with the in-app terms summary (version 2026.07.02) that users review and accept inside CRX. The documents you accept in the app govern your use of CRX; this page is the hosted, expanded version.</em></p>
+    <p><em>Last updated: November 4, 2026</em></p>
+    <p><em>This page is the hosted, expanded version of the terms summary (version 2026.07.23) that users review and accept inside CRX. The documents you accept in the app govern your use of CRX.</em></p>
 
     <h2>Acceptance of Terms</h2>
     <p>By downloading or using CRX, you agree to these Terms of Service. If you do not agree, please do not use the app. You must be at least 18 years old to create an account, and you are responsible for keeping your account credentials confidential.</p>
@@ -25,7 +25,7 @@ permalink: /terms/
     <h2>Use of the App</h2>
     <p>CRX is provided for personal, non-commercial use. You agree to use CRX only for lawful purposes and in accordance with these terms. You agree not to:</p>
     <ul>
-      <li>Use the app for anything other than personal medication management and authorized caregiving</li>
+      <li>Use the app for anything other than personal medication management</li>
       <li>Attempt to reverse engineer, modify, or redistribute the app</li>
       <li>Attempt to access another user's data without their authorization</li>
       <li>Use the app in any way that violates applicable laws</li>
@@ -33,25 +33,6 @@ permalink: /terms/
 
     <h2>User Responsibilities</h2>
     <p>You are responsible for the accuracy of the information you enter into the app. CRX is not liable for medication errors resulting from incorrect data entry, missed or delayed notifications, or incomplete drug information.</p>
-
-    <h2>Caregiver Sharing</h2>
-    <p>CRX lets you share your medication information with caregivers you explicitly approve. If you use caregiver sharing:</p>
-    <ul>
-      <li>Only invite people you trust. You control the permission level each caregiver receives and can revoke access at any time in Settings.</li>
-      <li>If you act as a caregiver, you agree to use your access only as the patient has authorized, only for their care, and to respect their privacy.</li>
-      <li>Caregiver actions are recorded in an audit log visible to the patient.</li>
-    </ul>
-
-    <h2>CRX Plus Subscription</h2>
-    <p>CRX offers an optional auto-renewing subscription, <strong>CRX Plus</strong>, which unlocks premium caregiver-sharing features.</p>
-    <ul>
-      <li><strong>Pricing:</strong> $4.99 per month or $39.99 per year (prices may vary by region; the App Store shows the exact price before you subscribe).</li>
-      <li><strong>Free trial:</strong> new subscribers get a 1-week free trial. If you don't cancel before the trial ends, the subscription begins and you are charged.</li>
-      <li><strong>Billing:</strong> payment is charged to your Apple ID through the App Store. The subscription renews automatically unless you cancel at least 24 hours before the end of the current period.</li>
-      <li><strong>Managing and canceling:</strong> manage or cancel anytime in your device's Settings → Apple ID → Subscriptions. Deleting the app does not cancel a subscription.</li>
-      <li><strong>Refunds:</strong> purchases are handled by Apple; refund requests go through Apple at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</li>
-    </ul>
-    <p>The core medication-tracking features of CRX do not require a subscription.</p>
 
     <h2>Drug Interaction Information</h2>
     <p>Drug interaction and safety information in CRX, including AI-generated analysis, is provided for informational purposes only. It may not be complete and must not be used as the sole basis for medication decisions. Always consult your pharmacist or physician regarding drug interactions.</p>
